@@ -24,7 +24,7 @@ int main(void)
 		{
 			total_sum += sum;
 		}
-		number1 = num2;
+		number1 = number2;
 		number2 = sum;
 
 	}
