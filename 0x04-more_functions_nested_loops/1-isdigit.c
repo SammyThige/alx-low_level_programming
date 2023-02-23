@@ -9,7 +9,7 @@
 int _isdigit(int c)
 {
 	char i;
-	
+
 	int digit = 0;
 
 	for (i = '0'; i <= '9'; i++)
@@ -20,7 +20,9 @@ int _isdigit(int c)
 			break;
 		}
 		else
+		{
 			digit = 0;
+		}
 	}
 
 	return (digit);
