@@ -8,9 +8,19 @@
 
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
-		return (1);
-	else
-		return (0);
+	char i;
+	
+	int digit = 0;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		if (i == c)
+		{
+			digit = 1;
+			break;
+		}
+	}
+
+	return (digit);
 }
 
