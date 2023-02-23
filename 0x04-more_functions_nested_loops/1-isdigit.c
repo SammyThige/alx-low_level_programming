@@ -19,6 +19,8 @@ int _isdigit(int c)
 			digit = 1;
 			break;
 		}
+		else
+			digit = 0;
 	}
 
 	return (digit);
