@@ -8,23 +8,22 @@
 
 void print_binary(unsigned long int n)
 {
-	
-	int i = 0, j = 0;
-	unsigned long int k = 0;
+	unsigned int flag = 0, max = 32768; /* 1000 0000 0000 0000 */
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	while (n > 0)
+	while (max)
 	{
-		k = n & 1;
-		if (k == 1)
-			j = 1;
-		if (j == 1)
-			_putchar(k + '0');
-		n = n >> 1;
-		i++;
+		if (flag == 1 && (n & max) == 0)
+			_putchar('0');
+		else if ((n & max) != 0)
+		{
+			_putchar('1');
+			flag = 1;
+		}
+		max >>= 1;
 	}
 }
